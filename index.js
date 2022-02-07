@@ -1,6 +1,10 @@
 const axios = require('axios')
 
 async function run(){
+    await fetchPosts();
+}
+
+async function fetchPosts(){
     for (let i = 1; i<2; ++i)
     {
         const uploadServer = await axios.get('https://api.vk.com/method/wall.get', {
